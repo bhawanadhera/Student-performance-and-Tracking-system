@@ -1,0 +1,267 @@
+/* Global body */
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gradient background for role page only */
+.role-body {
+    background: radial-gradient(circle at top left, #4f46e5, #1d4ed8 40%, #0f172a 100%);
+    min-height: 100vh;
+}
+
+/* Light background for dashboards */
+.dashboard-body {
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+/* Header (role page) */
+.site-header {
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(15,23,42,0.12);
+}
+.header-logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.header-title {
+    font-weight: 700;
+    color: #111827;
+    font-size: 18px;
+}
+.header-subtitle {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Header right links */
+nav .nav-link {
+    margin-left: 20px;
+    color: #000000;          /* black text */
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width 0.2s ease;
+}
+nav .nav-link:hover::after,
+nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Role hero (heading + cards) */
+.role-hero {
+    padding: 60px 0 40px;
+    color: #111827;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.site-title {
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.site-subtitle {
+    font-size: 15px;
+    color: #e5e7eb;
+    text-align: center;
+}
+
+/* Role cards */
+.role-card {
+    border-radius: 22px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #ffffff, #f9fafb);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.role-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 26px 60px rgba(15, 23, 42, 0.55);
+    border-color: #fbbf24;
+}
+.role-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #eef2ff, #e0e7ff);
+    margin: 0 auto 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #4c51bf;
+}
+.card-title {
+    font-weight: 700;
+}
+.card-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Accent buttons */
+.btn-accent {
+    background: #f59e0b;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+}
+.btn-accent:hover {
+    background: #d97706;
+    color: #fff;
+}
+/* Principal button – same orange */
+.btn-outline-accent {
+    background: #f59e0b;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+.btn-outline-accent:hover {
+    background: #d97706;
+    color: #ffffff;
+}
+
+/* Top bar for dashboards (teacher/principal pages) */
+.top-bar {
+    background: #ffffff;
+    height: 64px;
+}
+.back-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: none;
+    background: #edf2ff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #4c51bf;
+}
+
+/* Auth cards (login boxes) */
+.auth-card {
+    max-width: 420px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+/* Empty state card in teacher dashboard */
+.empty-card {
+    border-radius: 18px;
+    border: none;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+.empty-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #4b5563;
+}
+
+/* Performance list items (principal dashboard) */
+.performance-list .list-group-item {
+    border: none;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Form controls */
+.form-control,
+.form-select {
+    border-radius: 10px;
+}
+
+/* Info sections (features / about / contact on role page) */
+.info-section {
+    padding: 50px 0;
+    color: #111827;
+}
+.info-title {
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Info cards */
+.info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 22px;
+    box-shadow: 0 10px 26px rgba(15,23,42,0.16);
+    height: 100%;
+}
+.info-card h5 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+.info-card p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 0;
+}
+.info-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #eef2ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4c51bf;
+    font-size: 20px;
+}
+
+/* Contact form */
+.contact-form .form-control {
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: transparent;
+    color: #e5e7eb;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 10px 15px;
+    }
+    .site-title {
+        font-size: 26px;
+    }
+    .role-card {
+        margin-bottom: 10px;
+    }
+    nav .nav-link {
+        display: none; /* mobile pe simple rehnay ke liye */
+    }
+}
